@@ -55,10 +55,11 @@ rm ~/.config/Code/User/settings.json
 >How to install Visual Studio Code extensions from Command line
 FIXIT Missing link
 https://stackoverflow.com/questions/34286515/how-to-install-visual-studio-code-extensions-from-command-line
+
 >```bash
-# code --install-extension <extension-id>
-```
-## remove all keybindings
+># code --install-extension <extension-id>
+>```
+## remove all keybindings 
 ```bash
 rm ~/.config/Code/User/keybindings.json
 ```
