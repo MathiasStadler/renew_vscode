@@ -2,6 +2,10 @@
 
 ## Motivation
 
+- Delete/save the complete local config of Visual Studio Code and start with a fresh one. 
+- Renew from scratch
+- Demotrate on Debian 12
+
 ## Reason
 
 - For fun, out of curiosity, to learn etc.
