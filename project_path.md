@@ -98,3 +98,33 @@ code --list-extensions > /tmp/installed_extensions.txt
 cat /tmp/installed_extensions.txt | xargs -L 1 code --uninstall-extension
 ```
 <!-- keep the format -->
+<!-- -->
+>[!NOTE]
+>Symbol to mark web external links [![alt text][1]](./README.md)
+<!-- -->
+>[!TIP]
+>Get the link symbol with the curl command using the console
+>
+>>-m, --mode=MODE [![alt text][1]](https://www.man7.org/linux/man-pages/man1/mkdir.1.html) \
+    set file mode (as in chmod), not a=rwx - umask
+>><!-- -->
+>>-p, --parents [![alt text][1]](https://www.man7.org/linux/man-pages/man1/mkdir.1.html) \
+    no error if existing, make parent directories as needed,
+    with their file modes unaffected by any -m option
+><!-- -->
+>```bash
+># First make sure that the target directory exists
+>mkdir -p ./img
+>curl --create-dirs --output-dir img -O  "https://raw.githubusercontent.com/MathiasStadler/link_symbol_svg/360d1327d05280d53de5fa816c522f89a35891ca/img/link_symbol.svg"
+>```
+<!-- To comply with the format -->
+FIXIT doesn't work
+>[!TIP]
+>Add the reference to the link image at the end of the Markdown file
+<!-- -->
+>```bash
+># project_path.md
+> printf "\n<!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->\n[1]: ./img/link_symbol.svg\n"  >> ./project_path.md
+>#README.md
+> printf "\n<!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->\n[1]: ./img/link_symbol.svg\n"  >> ./README.md
+<!-- keep the format -->
