@@ -124,7 +124,8 @@ FIXIT doesn't work
 <!-- -->
 >```bash
 ># project_path.md
-> printf "\n<!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->\n[1]: ./img/link_symbol.svg\n"  >> ./project_path.md
+># printf "<\041\021\055\055" >> ./project_path.md
+>printf "<\041\021\055\055 Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->\n[1]: ./img/link_symbol.svg\n"  >> ./project_path.md
 >#README.md
-> printf "\n<!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->\n[1]: ./img/link_symbol.svg\n"  >> ./README.md
+> printf "\n<\033\055\055 Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->\n[1]: ./img/link_symbol.svg\n"  >> ./README.md
 <!-- keep the format -->
