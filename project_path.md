@@ -30,68 +30,71 @@ echo $BASH_VERSION
 5.2.15(1)-release
 ```
 
-## disable and save akt config of Visual Studio Code
+## Disable and save akt config of Visual Studio Code
+
 ```bash
 mv ~/.config/Code ~/.config/Code.old
 ```
 
-## list all extentions
+## List all already installed extensions
+
 ```bash
 code --list-extensions
 ```
-## install all extentions
+<!-- keep the format -->
+## /w version
+<!-- -->
 ```bash
-cat ~/.config/Code.old/extensions.list | xargs -L 1 code --install-extension
+code --list-extensions --show-versions
 ```
-## remove all extentions
-```bash
-cat ~/.config/Code.old/extensions.list | xargs -L 1 code --uninstall-extension
-```
-## remove all settings
-```bash
-rm ~/.config/Code/User/settings.json
-```
+<!-- keep the format -->
 >[!NOTE]
 >How to install Visual Studio Code extensions from Command line
 FIXIT Missing link
 https://stackoverflow.com/questions/34286515/how-to-install-visual-studio-code-extensions-from-command-line
 
->```bash
-># code --install-extension <extension-id>
->```
-## remove all keybindings 
+FIXIT explain example
+
+## install extensions via command line
+<!-- keep the format -->
+## create extension file
+<!-- keep the format -->
 ```bash
-rm ~/.config/Code/User/keybindings.json
+# code --install-extension <extension-id>
+cd /tmp \
+&& rm -rf /tmp/extensions.json || true \
+&& cat <<EoF >/tmp/extensions.json
+bierner.github-markdown-preview
+bierner.markdown-checkbox
+bierner.markdown-emoji
+bierner.markdown-footnotes
+bierner.markdown-mermaid
+bierner.markdown-preview-github-styles
+bierner.markdown-yaml-preamble
+davidanson.vscode-markdownlint
+gruntfuggly.todo-tree
+holdeniscoding.vscode-list-extensions
+streetsidesoftware.code-spell-checker
+usernamehw.errorlens
+wayou.vscode-todo-highlight
+EoF
 ```
-## remove all snippets
+<!-- keep the format -->
+## Install all extensions from a file as extensions list
+<!-- keep the format -->
 ```bash
-rm -rf ~/.config/Code/User/snippets
+cat /tmp/extensions.json | xargs -L 1 code --install-extension
 ```
-## remove all workspace storage
+<!-- keep the format -->
+## List installed all extensions
+<!-- keep the format -->
 ```bash
-rm -rf ~/.config/Code/Storage
+code --list-extensions > /tmp/installed_extensions.txt
 ```
-## remove all workspace state
+<!-- keep the format -->
+## Uninstall all extensions
+<!-- keep the format -->
 ```bash
-rm -rf ~/.config/Code/State
+cat /tmp/installed_extensions.txt | xargs -L 1 code --uninstall-extension
 ```
-## remove all workspace cached data
-```bash
-rm -rf ~/.config/Code/CachedData
-```
-## remove all workspace cached extensions
-```bash
-rm -rf ~/.config/Code/CachedExtensions
-```
-## remove all workspace cached metadata
-```bash
-rm -rf ~/.config/Code/CachedMetadata
-```
-## remove all workspace cached telemetry
-```bash
-rm -rf ~/.config/Code/CachedTelemetry
-```
-## remove all workspace cached telemetry data
-```bash
-rm -rf ~/.config/Code/CachedTelemetryData
-```
+<!-- keep the format -->
