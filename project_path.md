@@ -1,5 +1,5 @@
 # renew_vscode
-<!-- To comply with the format -->
+<!-- keep the format -->
 ## Start Date of project
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
@@ -10,21 +10,21 @@ Thu Jul 24 09:27:22 AM CEST 2025
 ## environment
 
 ### os
-<!-- To comply with the format -->
+<!-- keep the format -->
 ```bash
 uname -a
 Linux debian 6.1.0-37-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.140-1 (2025-05-22) x86_64 GNU/Linux
 ```
 
 ## point release
-<!-- To comply with the format -->
+<!-- keep the format -->
 ```bash
 cat /etc/debian_version
 12.11
 ```
 
 ## BASH version used
-<!-- To comply with the format -->
+<!-- keep the format -->
 ```bash
 echo $BASH_VERSION
 5.2.15(1)-release
@@ -98,7 +98,6 @@ code --list-extensions > /tmp/installed_extensions.txt
 cat /tmp/installed_extensions.txt | xargs -L 1 code --uninstall-extension
 ```
 <!-- keep the format -->
-<!-- -->
 >[!NOTE]
 >Symbol to mark web external links [![alt text][1]](./README.md)
 <!-- -->
@@ -117,17 +116,18 @@ cat /tmp/installed_extensions.txt | xargs -L 1 code --uninstall-extension
 >mkdir -p ./img
 >curl --create-dirs --output-dir img -O  "https://raw.githubusercontent.com/MathiasStadler/link_symbol_svg/360d1327d05280d53de5fa816c522f89a35891ca/img/link_symbol.svg"
 >```
-<!-- To comply with the format -->
+<!-- keep the format -->
 FIXIT doesn't work
 >[!TIP]
 >Add the reference to the link image at the end of the Markdown file
-<!-- -->
+<!-- keep the format -->
 >```bash
 ># project_path.md
-># printf "<\041\021\055\055" >> ./project_path.md
->printf "<\041\021\055\055 Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->\n[1]: ./img/link_symbol.svg\n"  >> ./project_path.md
+># printf "<\041\055\055" >> ./project_path.md
+>printf "<\041\055\055 Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->\n[1]: ./img/link_symbol.svg\n"  >> ./project_path.md
 >#README.md
-> printf "\n<\033\055\055 Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->\n[1]: ./img/link_symbol.svg\n"  >> ./README.md
+> printf "<\041\055\055 Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->\n [1]: ./img/link_symbol.svg\n"  >> ./README.md
+>```
 <!-- keep the format -->
-printf "<\041\021\055\055 Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->\n[1]: ./img/link_symbol.svg\n"  >> ./project_path.md
-printf "<\041\021\055\055 Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->\n[1]: ./img/link_symbol.svg\n"  >> ./project_path.md
+<!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
+[1]: ./img/link_symbol.svg
